@@ -1,5 +1,4 @@
 import { defineTool } from 'tmcp/tool';
-import { tool } from 'tmcp/utils';
 import { env } from '../env.ts';
 import { ofetch } from 'ofetch';
 import * as v from 'valibot';
