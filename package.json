@@ -6,8 +6,8 @@
 	"scripts": {
 		"lint": "prettier --check . && oxlint --type-aware && tsc --noEmit",
 		"fix": "prettier --write . && oxlint --type-aware --fix",
-		"start": "node --env-file=.env src/index.ts",
-		"dev": "node --env-file=.env --watch src/index.ts"
+		"start": "node --env-file-if-exists=.env src/index.ts",
+		"dev": "node --env-file-if-exists=.env --watch src/index.ts"
 	},
 	"devDependencies": {
 		"@e18e/eslint-plugin": "^0.2.0",
