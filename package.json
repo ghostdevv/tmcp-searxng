@@ -1,0 +1,36 @@
+{
+	"name": "tmcp-searxng",
+	"private": true,
+	"version": "0.1.0",
+	"type": "module",
+	"scripts": {
+		"lint": "prettier --check . && oxlint --type-aware && tsc --noEmit",
+		"fix": "prettier --write . && oxlint --type-aware --fix",
+		"start": "node --env-file=.env src/index.ts",
+		"dev": "node --env-file=.env --watch src/index.ts"
+	},
+	"devDependencies": {
+		"@e18e/eslint-plugin": "^0.2.0",
+		"@rlly/pedantic": "^0.2.0",
+		"@types/node": "^25.3.2",
+		"oxlint": "^1.50.0",
+		"oxlint-tsgolint": "^0.15.0",
+		"prettier": "^3.8.1",
+		"typescript": "^5.9.3"
+	},
+	"dependencies": {
+		"@hono/node-server": "^2.0.2",
+		"@tmcp/adapter-valibot": "^0.1.5",
+		"@tmcp/transport-http": "^0.8.5",
+		"@tmcp/transport-stdio": "^0.4.2",
+		"hono": "^4.12.18",
+		"ofetch": "^1.5.1",
+		"tmcp": "^1.19.3",
+		"valibot": "^1.4.0"
+	},
+	"packageManager": "pnpm@11.1.1",
+	"volta": {
+		"node": "26.1.0",
+		"pnpm": "11.1.1"
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"moduleResolution": "bundler",
+		"allowSyntheticDefaultImports": true,
+		"erasableSyntaxOnly": true,
+		"verbatimModuleSyntax": true,
+		"isolatedModules": true,
+		"lib": ["esnext"],
+		"module": "esnext",
+		"noEmit": true,
+		"target": "esnext",
+		"allowImportingTsExtensions": true
+	},
+	"include": ["./src/**/*.ts", "./test/**/*.ts"],
+	"exclude": ["./node_modules/**"]
+}
