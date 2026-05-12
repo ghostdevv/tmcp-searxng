@@ -1,6 +1,7 @@
 import * as v from 'valibot';
 
 const EnvSchema = v.object({
+	HOST: v.optional(v.pipe(v.string(), v.trim(), v.minLength(1)), '127.0.0.1'),
 	SEARXNG_AUTH: v.optional(v.pipe(v.string(), v.trim())),
 	SEARXNG_BASE_URL: v.pipe(
 		v.string(),

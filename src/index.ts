@@ -2,6 +2,7 @@ import { ValibotJsonSchemaAdapter } from '@tmcp/adapter-valibot';
 import { searchTool } from './tools/search.ts';
 import { parseArgs } from 'node:util';
 import { McpServer } from 'tmcp';
+import { env } from './env.ts';
 
 const adapter = new ValibotJsonSchemaAdapter();
 
@@ -58,7 +59,7 @@ switch (command) {
 			return req.notFound();
 		});
 
-		serve({ fetch: app.fetch, hostname: '127.0.0.1', port: 4143 }, (f) => {
+		serve({ fetch: app.fetch, hostname: env.HOST, port: 4143 }, (f) => {
 			console.log(`Listening on http://${f.address}:${f.port}`);
 		});
 		break;
