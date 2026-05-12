@@ -23,9 +23,9 @@ const searchSchema = v.object({
 
 export const searchTool = defineTool(
 	{
-		name: 'search',
+		name: 'web_search',
 		description:
-			'Search the web using SearXNG. Returns a list of search results with titles, URLs, and snippets.',
+			'Search the web returning a markdown list of results, with the page title, url, and content snippet. Use the fetch tool to fetch the content of individual pages as needed.',
 		schema: searchSchema,
 	},
 	async ({ query: q, time_range }) => {
