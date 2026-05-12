@@ -32,7 +32,7 @@ export const searchTool = defineTool(
 		const data = await ofetch<SearxngResponse>('/search', {
 			baseURL: env.SEARXNG_BASE_URL,
 			headers: {
-				Authorization: env.SEARNG_AUTH,
+				Authorization: env.SEARXNG_AUTH,
 				'User-Agent':
 					'tmcp-searxng (+https://github.com/ghostdevv/tmcp-searxng)',
 			},
