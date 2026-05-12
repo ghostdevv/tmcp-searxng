@@ -1,5 +1,6 @@
 import { defineTool } from 'tmcp/tool';
 import { tool } from 'tmcp/utils';
+import { env } from '../env.ts';
 import { ofetch } from 'ofetch';
 import * as v from 'valibot';
 
@@ -29,7 +30,12 @@ export const searchTool = defineTool(
 	},
 	async ({ query: q, time_range }) => {
 		const data = await ofetch<SearxngResponse>('/search', {
-			baseURL: process.env.SEARXNG_BASE_URL,
+			baseURL: env.SEARXNG_BASE_URL,
+			headers: {
+				Authorization: env.SEARNG_AUTH,
+				'User-Agent':
+					'tmcp-searxng (+https://github.com/ghostdevv/tmcp-searxng)',
+			},
 			params: {
 				format: 'json',
 				time_range,
