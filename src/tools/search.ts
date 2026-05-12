@@ -43,13 +43,11 @@ export const searchTool = defineTool(
 			},
 		});
 
-		const result = data.results
-			.filter((result) => v.is(SearchResultSchema, result))
-			.map((result) => {
-				return `### ${result.title}\n\nURL: ${result.url}\nSnippet: ${result.content}`;
-			})
-			.join('\n\n');
-
-		return tool.text(result);
+		return {
+			content: data.results.map((result) => ({
+				type: 'text',
+				text: `### ${result.title}\n\nURL: ${result.url}\nSnippet: ${result.content}`,
+			})),
+		};
 	},
 );
