@@ -16,7 +16,7 @@
 		"oxlint": "1.50.0",
 		"oxlint-tsgolint": "0.15.0",
 		"prettier": "3.8.1",
-		"typescript": "5.9.3"
+		"typescript": "6.0.3"
 	},
 	"dependencies": {
 		"@hono/node-server": "^2.0.2",

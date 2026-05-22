@@ -14,7 +14,8 @@
 		"module": "esnext",
 		"noEmit": true,
 		"target": "esnext",
-		"allowImportingTsExtensions": true
+		"allowImportingTsExtensions": true,
+		"types": ["node"]
 	},
 	"include": ["./src/**/*.ts", "./test/**/*.ts"],
 	"exclude": ["./node_modules/**"]
