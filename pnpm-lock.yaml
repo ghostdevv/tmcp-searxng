@@ -14,6 +14,9 @@ importers:
       '@tmcp/adapter-valibot':
         specifier: ^0.1.5
         version: 0.1.5(tmcp@1.19.3(typescript@5.9.3))(valibot@1.4.0(typescript@5.9.3))
+      '@tmcp/transport-cli':
+        specifier: https://pkg.pr.new/@tmcp/transport-cli@3ed0c17
+        version: https://pkg.pr.new/@tmcp/transport-cli@3ed0c17(tmcp@1.19.3(typescript@5.9.3))
       '@tmcp/transport-http':
         specifier: ^0.8.5
         version: 0.8.5(tmcp@1.19.3(typescript@5.9.3))
@@ -253,6 +256,13 @@ packages:
     peerDependencies:
       tmcp: ^1.16.3
 
+  '@tmcp/transport-cli@https://pkg.pr.new/@tmcp/transport-cli@3ed0c17':
+    resolution: {integrity: sha512-KQZFx+f3tPyI6OUtVNuzBtH1uxFAa3oX7oAghca3mgFXFXlAmUw+sPnFLc7VynLH3ISpnHz/FghFihzs45cumw==, tarball: https://pkg.pr.new/@tmcp/transport-cli@3ed0c17}
+    version: 0.0.3
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      tmcp: ^1.16.3
+
   '@tmcp/transport-http@0.8.5':
     resolution: {integrity: sha512-qQLqiCTtbxtTSswqOn/782df7O57RxI/yLUtCDQ++kHEhbmDUc8glmmtGJ3mrb7yPSPoM5VF2Pc2Q5cA6quzLA==}
     peerDependencies:
@@ -298,6 +308,10 @@ packages:
   module-replacements@2.11.0:
     resolution: {integrity: sha512-j5sNQm3VCpQQ7nTqGeOZtoJtV3uKERgCBm9QRhmGRiXiqkf7iRFOkfxdJRZWLkqYY8PNf4cDQF/WfXUYLENrRA==}
 
+  mri@1.2.0:
+    resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
+    engines: {node: '>=4'}
+
   node-fetch-native@1.6.7:
     resolution: {integrity: sha512-g9yhqoedzIUm0nTnTqAQvueMPVOuIY16bqgAJJC8XOOubYFNwz6IER9qs0Gq2Xd0+CecCKFjtdDTMA4u4xG06Q==}
 
@@ -322,6 +336,10 @@ packages:
     resolution: {integrity: sha512-UOnG6LftzbdaHZcKoPFtOcCKztrQ57WkHDeRD9t/PTQtmT0NHSeWWepj6pS0z/N7+08BHFDQVUrfmfMRcZwbMg==}
     engines: {node: '>=14'}
     hasBin: true
+
+  sade@1.8.1:
+    resolution: {integrity: sha512-xal3CZX1Xlo/k4ApwCFrHVACi9fBqJ7V+mwhBsuf/1IOKbBy098Fex+Wa/5QMubw09pSZ/u8EY8PWgevJsXp1A==}
+    engines: {node: '>=6'}
 
   semver@7.7.4:
     resolution: {integrity: sha512-vFKC2IEtQnVhpT78h1Yp8wzwrf8CM+MzKMHGJZfBtzhZNycRFnXsHk6E5TxIkkMsgNS7mdX3AGB7x2QM2di4lA==}
@@ -463,6 +481,11 @@ snapshots:
     dependencies:
       tmcp: 1.19.3(typescript@5.9.3)
 
+  '@tmcp/transport-cli@https://pkg.pr.new/@tmcp/transport-cli@3ed0c17(tmcp@1.19.3(typescript@5.9.3))':
+    dependencies:
+      sade: 1.8.1
+      tmcp: 1.19.3(typescript@5.9.3)
+
   '@tmcp/transport-http@0.8.5(tmcp@1.19.3(typescript@5.9.3))':
     dependencies:
       '@tmcp/session-manager': 0.2.1(tmcp@1.19.3(typescript@5.9.3))
@@ -498,6 +521,8 @@ snapshots:
   json-rpc-2.0@1.7.1: {}
 
   module-replacements@2.11.0: {}
+
+  mri@1.2.0: {}
 
   node-fetch-native@1.6.7: {}
 
@@ -540,6 +565,10 @@ snapshots:
       oxlint-tsgolint: 0.15.0
 
   prettier@3.8.1: {}
+
+  sade@1.8.1:
+    dependencies:
+      mri: 1.2.0
 
   semver@7.7.4: {}
 
