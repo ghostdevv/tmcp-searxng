@@ -1,6 +1,6 @@
 import { ValibotJsonSchemaAdapter } from '@tmcp/adapter-valibot';
+import { CliTransport } from '@tmcp/transport-cli';
 import { searchTool } from './tools/search.ts';
-import { parseArgs } from 'node:util';
 import { McpServer } from 'tmcp';
 import { env } from './env.ts';
 
@@ -22,53 +22,43 @@ const server = new McpServer(
 
 server.tool(searchTool);
 
-type Command = 'serve' | 'stdio';
+const cli = new CliTransport(server, {
+	setup(sade) {
+		sade.command('serve')
+			.describe('Serve the MCP server over Streamable HTTP')
+			.action(async () => {
+				const { HttpTransport } = await import('@tmcp/transport-http');
+				const { serve } = await import('@hono/node-server');
+				const { Hono } = await import('hono');
 
-function args() {
-	const args = parseArgs({
-		args: process.argv.slice(2),
-		allowPositionals: true,
-	});
+				const transport = new HttpTransport(server);
+				const app = new Hono();
 
-	const command = args.positionals.at(0);
+				app.use(async (req) => {
+					const res = await transport.respond(req.req.raw);
+					if (res) return res;
+					return req.notFound();
+				});
 
-	if (!command || (command !== 'serve' && command !== 'stdio')) {
-		// prettier-ignore
-		console.error('Missing/Invalid command. Usage: tmcp-searxng <serve|stdio>',);
-		process.exit(1);
-	}
+				serve(
+					{ fetch: app.fetch, hostname: env.HOST, port: 4143 },
+					(f) => {
+						console.log(
+							`Listening on http://${f.address}:${f.port}`,
+						);
+					},
+				);
+			});
 
-	return { command: command as Command };
-}
+		sade.command('stdio')
+			.describe('Serve the MCP server over STDIO')
+			.action(async () => {
+				const { StdioTransport } =
+					await import('@tmcp/transport-stdio');
+				const transport = new StdioTransport(server);
+				transport.listen();
+			});
+	},
+});
 
-const { command } = args();
-
-// oxlint-disable-next-line default-case
-switch (command) {
-	case 'serve': {
-		const { HttpTransport } = await import('@tmcp/transport-http');
-		const { serve } = await import('@hono/node-server');
-		const { Hono } = await import('hono');
-
-		const transport = new HttpTransport(server);
-		const app = new Hono();
-
-		app.use(async (req) => {
-			const res = await transport.respond(req.req.raw);
-			if (res) return res;
-			return req.notFound();
-		});
-
-		serve({ fetch: app.fetch, hostname: env.HOST, port: 4143 }, (f) => {
-			console.log(`Listening on http://${f.address}:${f.port}`);
-		});
-		break;
-	}
-
-	case 'stdio': {
-		const { StdioTransport } = await import('@tmcp/transport-stdio');
-		const transport = new StdioTransport(server);
-		transport.listen();
-		break;
-	}
-}
+await cli.run();
