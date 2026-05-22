@@ -34,22 +34,22 @@ importers:
         version: 1.4.0(typescript@5.9.3)
     devDependencies:
       '@e18e/eslint-plugin':
-        specifier: ^0.2.0
+        specifier: 0.2.0
         version: 0.2.0(oxlint@1.50.0(oxlint-tsgolint@0.15.0))
       '@rlly/pedantic':
-        specifier: ^0.2.0
+        specifier: 0.2.0
         version: 0.2.0(@e18e/eslint-plugin@0.2.0(oxlint@1.50.0(oxlint-tsgolint@0.15.0)))(oxlint-tsgolint@0.15.0)(oxlint@1.50.0(oxlint-tsgolint@0.15.0))
       '@types/node':
         specifier: ^25.3.2
         version: 25.3.2
       oxlint:
-        specifier: ^1.50.0
+        specifier: 1.50.0
         version: 1.50.0(oxlint-tsgolint@0.15.0)
       oxlint-tsgolint:
-        specifier: ^0.15.0
+        specifier: 0.15.0
         version: 0.15.0
       prettier:
-        specifier: ^3.8.1
+        specifier: 3.8.1
         version: 3.8.1
       typescript:
         specifier: ^5.9.3
