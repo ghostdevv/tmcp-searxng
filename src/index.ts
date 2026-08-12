@@ -53,14 +53,14 @@ switch (command) {
 		const transport = new HttpTransport(server);
 		const app = new Hono();
 
+		app.get('/health', (c) => {
+			return c.text('All is well');
+		});
+
 		app.use(async (req) => {
 			const res = await transport.respond(req.req.raw);
 			if (res) return res;
 			return req.notFound();
-		});
-
-		app.get('/health', (c) => {
-			return c.text('All is well');
 		});
 
 		serve({ fetch: app.fetch, hostname: env.HOST, port: 4143 }, (f) => {
