@@ -59,6 +59,10 @@ switch (command) {
 			return req.notFound();
 		});
 
+		app.get('/health', (c) => {
+			return c.text('All is well');
+		});
+
 		serve({ fetch: app.fetch, hostname: env.HOST, port: 4143 }, (f) => {
 			console.log(`Listening on http://${f.address}:${f.port}`);
 		});
