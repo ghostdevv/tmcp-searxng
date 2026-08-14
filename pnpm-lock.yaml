@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@hono/node-server':
         specifier: ^2.0.2
-        version: 2.0.2(hono@4.12.18)
+        version: 2.0.2(hono@4.12.34)
       '@tmcp/adapter-valibot':
         specifier: ^0.1.5
         version: 0.1.5(tmcp@1.19.3(typescript@6.0.3))(valibot@1.4.0(typescript@6.0.3))
@@ -22,7 +22,7 @@ importers:
         version: 0.4.2(tmcp@1.19.3(typescript@6.0.3))
       hono:
         specifier: ^4.12.18
-        version: 4.12.18
+        version: 4.12.34
       ofetch:
         specifier: ^1.5.1
         version: 1.5.1
@@ -288,8 +288,8 @@ packages:
   esm-env@1.2.2:
     resolution: {integrity: sha512-Epxrv+Nr/CaL4ZcFGPJIYLWFom+YeV1DqMLHJoEd9SYRxNbaFruBwfEX/kkHUJf55j2+TUbmDcmuilbP1TmXHA==}
 
-  hono@4.12.18:
-    resolution: {integrity: sha512-RWzP96k/yv0PQfyXnWjs6zot20TqfpfsNXhOnev8d1InAxubW93L11/oNUc3tQqn2G0bSdAOBpX+2uDFHV7kdQ==}
+  hono@4.12.34:
+    resolution: {integrity: sha512-GqXJqY/xJkJmuloTrnV1ZEXG3fqte+VjkUqoRNZXcrUidiUOP4fMSIHHY4tsqZBK++kVyWmt/AAfSUuy57/eSA==}
     engines: {node: '>=16.9.0'}
 
   json-rpc-2.0@1.7.1:
@@ -364,9 +364,9 @@ snapshots:
     optionalDependencies:
       oxlint: 1.50.0(oxlint-tsgolint@0.15.0)
 
-  '@hono/node-server@2.0.2(hono@4.12.18)':
+  '@hono/node-server@2.0.2(hono@4.12.34)':
     dependencies:
-      hono: 4.12.18
+      hono: 4.12.34
 
   '@oxlint-tsgolint/darwin-arm64@0.15.0':
     optional: true
@@ -493,7 +493,7 @@ snapshots:
 
   esm-env@1.2.2: {}
 
-  hono@4.12.18: {}
+  hono@4.12.34: {}
 
   json-rpc-2.0@1.7.1: {}
 
