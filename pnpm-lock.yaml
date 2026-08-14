@@ -40,8 +40,8 @@ importers:
         specifier: 0.2.0
         version: 0.2.0(@e18e/eslint-plugin@0.2.0(oxlint@1.50.0(oxlint-tsgolint@0.15.0)))(oxlint-tsgolint@0.15.0)(oxlint@1.50.0(oxlint-tsgolint@0.15.0))
       '@types/node':
-        specifier: 25.9.0
-        version: 25.9.0
+        specifier: 25.9.5
+        version: 25.9.5
       oxlint:
         specifier: 1.50.0
         version: 1.50.0(oxlint-tsgolint@0.15.0)
@@ -267,8 +267,8 @@ packages:
     peerDependencies:
       tmcp: ^1.16.3
 
-  '@types/node@25.9.0':
-    resolution: {integrity: sha512-AOQwYUNolgy3VosiRqXrACUXTN8nJUtPl7FJXMqZVyxiiCLhQuG3jXKvCS1ALr+Y2OmZhzzLVlYPEqJaiqkaJQ==}
+  '@types/node@25.9.5':
+    resolution: {integrity: sha512-OScDchr2fwuUmWdf4kZ9h7PcJiYDVInhJizG/biAq3cAvqwYktuy/TYGGdZNMtNTFUP7rnb0NU4TUdm82kt4Rg==}
 
   '@valibot/to-json-schema@1.7.0':
     resolution: {integrity: sha512-Y3pPVibbIOHzohrlxSINvO7w/bvXkoYS3BQHoImV9ynE+bXKf171bdMucPurV2zp7gdmt0L1HCcNAsbo7cFRQw==}
@@ -473,7 +473,7 @@ snapshots:
     dependencies:
       tmcp: 1.19.3(typescript@6.0.3)
 
-  '@types/node@25.9.0':
+  '@types/node@25.9.5':
     dependencies:
       undici-types: 7.24.6
 
