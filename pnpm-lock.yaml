@@ -15,8 +15,8 @@ importers:
         specifier: ^0.1.5
         version: 0.1.5(tmcp@1.19.3(typescript@6.0.3))(valibot@1.4.0(typescript@6.0.3))
       '@tmcp/transport-http':
-        specifier: ^0.8.5
-        version: 0.8.5(tmcp@1.19.3(typescript@6.0.3))
+        specifier: ^0.9.0
+        version: 0.9.0(tmcp@1.19.3(typescript@6.0.3))
       '@tmcp/transport-stdio':
         specifier: ^0.4.2
         version: 0.4.2(tmcp@1.19.3(typescript@6.0.3))
@@ -248,16 +248,16 @@ packages:
       tmcp: ^1.17.0
       valibot: ^1.1.0
 
-  '@tmcp/session-manager@0.2.1':
-    resolution: {integrity: sha512-DOGy9LfufXCy1wfpGHZ6qPSDQtRnTVwOb71+41ffovTqzLMZlK3iLK/LIsekHxIiku+iIAUiqEKN+DHbqEm8IA==}
+  '@tmcp/session-manager@0.3.0':
+    resolution: {integrity: sha512-L16r8qlzXUoS0ec7kuap1P1nQorCcZHHUFe7UGijwwrfBRXB0hFnfC+/BM1PVdGlM7Ade8YxomecybQN5imYXA==}
     peerDependencies:
-      tmcp: ^1.16.3
+      tmcp: ^1.20.0-next.0 || ^1.20.0
 
-  '@tmcp/transport-http@0.8.5':
-    resolution: {integrity: sha512-qQLqiCTtbxtTSswqOn/782df7O57RxI/yLUtCDQ++kHEhbmDUc8glmmtGJ3mrb7yPSPoM5VF2Pc2Q5cA6quzLA==}
+  '@tmcp/transport-http@0.9.0':
+    resolution: {integrity: sha512-AcHg8frvReVBtSIy3Wps9EBN2nfdq1cC82UzRoNGy5LoNDGe5xDkeYcgcqR9Gyz9uYcfO1evbhZIVtRzmQqW2Q==}
     peerDependencies:
-      '@tmcp/auth': ^0.3.3 || ^0.4.0
-      tmcp: ^1.18.0
+      '@tmcp/auth': ^0.3.3 || ^0.4.0 || ^0.5.0-next.0
+      tmcp: ^1.20.0-next.0 || ^1.20.0
     peerDependenciesMeta:
       '@tmcp/auth':
         optional: true
@@ -459,13 +459,14 @@ snapshots:
       tmcp: 1.19.3(typescript@6.0.3)
       valibot: 1.4.0(typescript@6.0.3)
 
-  '@tmcp/session-manager@0.2.1(tmcp@1.19.3(typescript@6.0.3))':
+  '@tmcp/session-manager@0.3.0(tmcp@1.19.3(typescript@6.0.3))':
     dependencies:
+      json-rpc-2.0: 1.7.1
       tmcp: 1.19.3(typescript@6.0.3)
 
-  '@tmcp/transport-http@0.8.5(tmcp@1.19.3(typescript@6.0.3))':
+  '@tmcp/transport-http@0.9.0(tmcp@1.19.3(typescript@6.0.3))':
     dependencies:
-      '@tmcp/session-manager': 0.2.1(tmcp@1.19.3(typescript@6.0.3))
+      '@tmcp/session-manager': 0.3.0(tmcp@1.19.3(typescript@6.0.3))
       esm-env: 1.2.2
       tmcp: 1.19.3(typescript@6.0.3)
 
