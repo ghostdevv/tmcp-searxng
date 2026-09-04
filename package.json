@@ -10,12 +10,12 @@
 		"dev": "node --env-file-if-exists=.env --watch src/index.ts"
 	},
 	"devDependencies": {
-		"@e18e/eslint-plugin": "0.2.0",
-		"@rlly/pedantic": "0.2.0",
+		"@e18e/eslint-plugin": "0.8.0",
+		"@rlly/pedantic": "0.7.0",
 		"@types/node": "25.9.0",
-		"oxlint": "1.50.0",
-		"oxlint-tsgolint": "0.15.0",
-		"prettier": "3.8.1",
+		"oxlint": "1.81.0",
+		"oxlint-tsgolint": "0.25.0",
+		"prettier": "3.9.6",
 		"typescript": "6.0.3"
 	},
 	"dependencies": {
