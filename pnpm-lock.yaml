@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@hono/node-server':
         specifier: ^2.0.2
-        version: 2.0.2(hono@4.12.18)
+        version: 2.0.10(hono@4.12.18)
       '@tmcp/adapter-valibot':
         specifier: ^0.1.5
         version: 0.1.5(tmcp@1.19.3(typescript@6.0.3))(valibot@1.4.0(typescript@6.0.3))
@@ -68,8 +68,8 @@ packages:
       oxlint:
         optional: true
 
-  '@hono/node-server@2.0.2':
-    resolution: {integrity: sha512-tXlTi1h/4V7sDe7i97IVP+9re9ZU7wXZZggnR5ucCRclf1+AX6YhGStrR5w8bLj+3Mlyl0pKfBh9gqTqqnGKfQ==}
+  '@hono/node-server@2.0.10':
+    resolution: {integrity: sha512-ZcnNVhKTmyDJeg0UlnZjvM73JBsTAuhrH/J4fjwGOw59PwOW51r4J+p6CsKZWXdKSme4MFqU62CZMOsdDrU4CA==}
     engines: {node: '>=20'}
     peerDependencies:
       hono: ^4
@@ -364,7 +364,7 @@ snapshots:
     optionalDependencies:
       oxlint: 1.50.0(oxlint-tsgolint@0.15.0)
 
-  '@hono/node-server@2.0.2(hono@4.12.18)':
+  '@hono/node-server@2.0.10(hono@4.12.18)':
     dependencies:
       hono: 4.12.18
 
