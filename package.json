@@ -19,7 +19,7 @@
 		"typescript": "6.0.3"
 	},
 	"dependencies": {
-		"@hono/node-server": "^2.0.2",
+		"@hono/node-server": "^2.0.10",
 		"@tmcp/adapter-valibot": "^0.1.5",
 		"@tmcp/transport-http": "^0.8.5",
 		"@tmcp/transport-stdio": "^0.4.2",
