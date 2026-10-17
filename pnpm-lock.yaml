@@ -13,7 +13,7 @@ importers:
         version: 2.0.2(hono@4.12.18)
       '@tmcp/adapter-valibot':
         specifier: ^0.1.5
-        version: 0.1.5(tmcp@1.19.3(typescript@6.0.3))(valibot@1.4.0(typescript@6.0.3))
+        version: 0.1.5(tmcp@1.19.3(typescript@6.0.3))(valibot@1.4.2(typescript@6.0.3))
       '@tmcp/transport-http':
         specifier: ^0.8.5
         version: 0.8.5(tmcp@1.19.3(typescript@6.0.3))
@@ -30,8 +30,8 @@ importers:
         specifier: ^1.19.3
         version: 1.19.3(typescript@6.0.3)
       valibot:
-        specifier: ^1.4.0
-        version: 1.4.0(typescript@6.0.3)
+        specifier: ^1.4.2
+        version: 1.4.2(typescript@6.0.3)
     devDependencies:
       '@e18e/eslint-plugin':
         specifier: 0.2.0
@@ -348,8 +348,8 @@ packages:
   uri-template-matcher@1.1.2:
     resolution: {integrity: sha512-uZc1h12jdO3m/R77SfTEOuo6VbMhgWznaawKpBjRGSJb7i91x5PgI37NQJtG+Cerxkk0yr1pylBY2qG1kQ+aEQ==}
 
-  valibot@1.4.0:
-    resolution: {integrity: sha512-iC/x7fVcSyOwlm/VSt7RlHnzNGLGvR9GnxdifUeWoCJo0q4ZZvrVkIHC6faTlkxG47I2Y4UrFquPuVHCrOnrLg==}
+  valibot@1.4.2:
+    resolution: {integrity: sha512-gjdCvJ6d3RyHAneqxMYMW9QMCwYMb3jpOO0IyHZV1bnRHFBHrX3VkIILt5XYR0WhwHiH7Mty8ovuPZ/O3gamrg==}
     peerDependencies:
       typescript: '>=5'
     peerDependenciesMeta:
@@ -452,12 +452,12 @@ snapshots:
 
   '@standard-schema/spec@1.1.0': {}
 
-  '@tmcp/adapter-valibot@0.1.5(tmcp@1.19.3(typescript@6.0.3))(valibot@1.4.0(typescript@6.0.3))':
+  '@tmcp/adapter-valibot@0.1.5(tmcp@1.19.3(typescript@6.0.3))(valibot@1.4.2(typescript@6.0.3))':
     dependencies:
       '@standard-schema/spec': 1.1.0
-      '@valibot/to-json-schema': 1.7.0(valibot@1.4.0(typescript@6.0.3))
+      '@valibot/to-json-schema': 1.7.0(valibot@1.4.2(typescript@6.0.3))
       tmcp: 1.19.3(typescript@6.0.3)
-      valibot: 1.4.0(typescript@6.0.3)
+      valibot: 1.4.2(typescript@6.0.3)
 
   '@tmcp/session-manager@0.2.1(tmcp@1.19.3(typescript@6.0.3))':
     dependencies:
@@ -477,9 +477,9 @@ snapshots:
     dependencies:
       undici-types: 7.24.6
 
-  '@valibot/to-json-schema@1.7.0(valibot@1.4.0(typescript@6.0.3))':
+  '@valibot/to-json-schema@1.7.0(valibot@1.4.2(typescript@6.0.3))':
     dependencies:
-      valibot: 1.4.0(typescript@6.0.3)
+      valibot: 1.4.2(typescript@6.0.3)
 
   destr@2.0.5: {}
 
@@ -551,7 +551,7 @@ snapshots:
       json-rpc-2.0: 1.7.1
       sqids: 0.3.0
       uri-template-matcher: 1.1.2
-      valibot: 1.4.0(typescript@6.0.3)
+      valibot: 1.4.2(typescript@6.0.3)
     transitivePeerDependencies:
       - typescript
 
@@ -563,6 +563,6 @@ snapshots:
 
   uri-template-matcher@1.1.2: {}
 
-  valibot@1.4.0(typescript@6.0.3):
+  valibot@1.4.2(typescript@6.0.3):
     optionalDependencies:
       typescript: 6.0.3
