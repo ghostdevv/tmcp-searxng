@@ -21,7 +21,7 @@
 	"dependencies": {
 		"@hono/node-server": "^2.0.2",
 		"@tmcp/adapter-valibot": "^0.1.5",
-		"@tmcp/transport-http": "^0.8.5",
+		"@tmcp/transport-http": "^0.9.0",
 		"@tmcp/transport-stdio": "^0.4.2",
 		"hono": "^4.12.18",
 		"ofetch": "^1.5.1",
