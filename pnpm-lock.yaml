@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@hono/node-server':
         specifier: ^2.0.2
-        version: 2.0.2(hono@4.12.18)
+        version: 2.1.6(hono@4.12.18)
       '@tmcp/adapter-valibot':
         specifier: ^0.1.5
         version: 0.1.5(tmcp@1.19.3(typescript@6.0.3))(valibot@1.4.0(typescript@6.0.3))
@@ -68,11 +68,11 @@ packages:
       oxlint:
         optional: true
 
-  '@hono/node-server@2.0.2':
-    resolution: {integrity: sha512-tXlTi1h/4V7sDe7i97IVP+9re9ZU7wXZZggnR5ucCRclf1+AX6YhGStrR5w8bLj+3Mlyl0pKfBh9gqTqqnGKfQ==}
+  '@hono/node-server@2.1.6':
+    resolution: {integrity: sha512-p/KH9MnfNcsm3sR6x4lNgm5j+QN4Et8srKredl9DZfXiyZ1UQ3aQ2YVpFLbqktYN5JI+DB+VZFKM2PqE5hLKjQ==}
     engines: {node: '>=20'}
     peerDependencies:
-      hono: ^4
+      hono: ^4 || ^5.0.0-0
 
   '@oxlint-tsgolint/darwin-arm64@0.15.0':
     resolution: {integrity: sha512-d7Ch+A6hic+RYrm32+Gh1o4lOrQqnFsHi721ORdHUDBiQPea+dssKUEMwIbA6MKmCy6TVJ02sQyi24OEfCiGzw==}
@@ -364,7 +364,7 @@ snapshots:
     optionalDependencies:
       oxlint: 1.50.0(oxlint-tsgolint@0.15.0)
 
-  '@hono/node-server@2.0.2(hono@4.12.18)':
+  '@hono/node-server@2.1.6(hono@4.12.18)':
     dependencies:
       hono: 4.12.18
 
